@@ -1,0 +1,19 @@
+div {
+    border: 3px solid;
+    height: 30px;
+    margin: 10px 0 20px 0;
+}
+
+#header {
+    height: 50px;
+}
+
+#conteudo {
+    height: 1300px;
+}
+
+#fotos {
+    width: 150px;
+    height: 150px;
+    margin: 30px 0 0 30px;
+}
