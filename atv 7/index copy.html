@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family: Arial;
+    background:#f1f1f1;
+    margin:0;
+}
+
+.header{
+    text-align:center;
+    padding:30px;
+    background:white;
+}
+
+.menu{
+    background:#333;
+    display:flex;
+}
+
+.menu a{
+    color:white;
+    padding:14px 20px;
+    text-decoration:none;
+    flex:1;
+    text-align:center;
+}
+
+.row{
+    display:flex;
+}
+
+.main{
+    flex:70%;
+    padding:20px;
+}
+
+.side{
+    flex:30%;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+}
+
+.img{
+    background:#aaa;
+    height:150px;
+}
+
+@media(max-width:800px){
+    .row{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Meu Site Responsivo</h1>
+    <p>Redimensione a janela para testar</p>
+</div>
+
+<div class="menu">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+</div>
+
+<div class="row">
+
+    <div class="main">
+
+        <div class="card">
+            <h2>Sessão 1</h2>
+            <div class="img"></div>
+            <p>Texto da postagem.</p>
+        </div>
+
+        <div class="card">
+            <h2>Sessão 2</h2>
+            <div class="img"></div>
+            <p>Outra postagem.</p>
+        </div>
+
+    </div>
+
+    <div class="side">
+
+        <div class="card">
+            <h3>Sobre Mim</h3>
+            <div class="img"></div>
+        </div>
+
+        <div class="card">
+            <h3>Postagens Populares</h3>
+            <div class="img"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
