@@ -3,124 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zoro header</title> <link rel="shortcut icon" href="caveira2.png" type="image/x-icon">
 </head>
 <body>
-    
-</body>
-</html>
- <!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Meu Site Responsivo</title>
+
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial;
+    font-family:Arial, sans-serif;
     background:#f1f1f1;
     margin:0;
 }
 
 .header{
-    text-align:center;
-    padding:30px;
     background:white;
-}
-
-.menu{
-    background:#333;
-    display:flex;
-}
-
-.menu a{
-    color:white;
-    padding:14px 20px;
-    text-decoration:none;
-    flex:1;
+    padding:30px;
     text-align:center;
+}
+
+.navbar{
+    display:flex;
+    background:#333;
+}
+
+.navbar a{
+    flex:1;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    padding:14px;
+}
+
+.navbar a:hover{
+    background:#555;
 }
 
 .row{
     display:flex;
+    flex-wrap:wrap;
 }
 
-.main{
-    flex:70%;
-    padding:20px;
+.left{
+    flex:75%;
+    padding:10px;
 }
 
-.side{
-    flex:30%;
-    padding:20px;
+.right{
+    flex:25%;
+    padding:10px;
 }
 
 .card{
     background:white;
+    padding:15px;
+    margin-top:15px;
+}
+
+.fakeimg{
+    background:#aaa;
+    min-height:150px;
+    padding:10px;
+}
+
+.fakeimg[contenteditable]{
+    cursor:text;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+button{
+    background:#333;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#555;
+}
+
+.footer{
+    background:white;
+    text-align:center;
     padding:20px;
     margin-top:20px;
 }
 
-.img{
-    background:#aaa;
-    height:150px;
+@media(max-width:800px){
+
+.row{
+    flex-direction:column;
 }
 
-@media(max-width:800px){
-    .row{
-        flex-direction:column;
-    }
+.navbar{
+    flex-direction:column;
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="header">
-    <h1>Meu Site Responsivo</h1>
-    <p>Redimensione a janela para testar</p>
+    <h1>Zoro header</h1>
+    <p>Baixe jogos de graça</p>
+    <button class="menu-btn">☰</button>
 </div>
 
-<div class="menu">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
+<div class="navbar">
+    <a href="#sessao1">Link 1</a>
+    <a href="#sessao2">Link 2</a>
+    <a href="#contato">Link 3</a>
+    <a href="#redes">Link 4</a>
 </div>
 
 <div class="row">
 
-    <div class="main">
+<div class="left">  
 
-        <div class="card">
-            <h2>Sessão 1</h2>
-            <div class="img"></div>
-            <p>Texto da postagem.</p>
-        </div>
+<div class="card" id="sessao1">
+    <h2>jogos para você</h2>   <img src="minecraft.jpg" alt="" width="10%">  <a href="minecraft.jpg" download class="botao-download">
+    📥 download
+</a>
+    <p></p>
 
-        <div class="card">
-            <h2>Sessão 2</h2>
-            <div class="img"></div>
-            <p>Outra postagem.</p>
-        </div>
-
+    <div class="fakeimg" contenteditable="true">
+        
     </div>
 
-    <div class="side">
+    <p></p>
+</div>
 
-        <div class="card">
-            <h3>Sobre Mim</h3>
-            <div class="img"></div>
-        </div>
+<div class="card" id="sessao2">
+    <h2>Novo Lansamento</h2> 
+    <p></p>
 
-        <div class="card">
-            <h3>Postagens Populares</h3>
-            <div class="img"></div>
-        </div>
-
+    <div class="fakeimg" contenteditable="true">
+        
     </div>
+
+    <p></p>
+</div>
+
+<div class="card" id="contato">
+
+<h2>Prencha esse formurio para asesar esse site</h2>
+
+<form>
+
+<label>Primeiro Nome:</label>
+<input type="text">
+
+<label>Sobrenome:</label>
+<input type="text">
+
+<label>E-mail:</label>
+<input type="email">
+
+<label>Mensagem:</label>
+<textarea rows="6"></textarea>
+
+<button type="button" onclick="window.location.href='obrigado.html'">
+    Enviar
+</button>
+
+</form>
 
 </div>
 
+</div>
+
+<div class="right">
+
+<div class="card">
+    <h3>nome da conta</h3>
+
+    <div class="fakeimg" contenteditable="true">
+        
+    </div>
+</div>
+
+<div class="card">
+    <h3>jogos em destaque </h3> <img src="Hollow_Knight_Cover.jpg" width="190px" height="190px"> <a href="Hollow_Knight_Cover.jpg" download class="botao-download">
+    📥 download
+</a>
+</a>
+
+    <div class="fakeimg" contenteditable="true">
+        
+    </div>
+
+    <br>
+
+    <h3>nossa logo </h3> <img src="one piece.png" style="width:100%; height:300px; object-fit:cover;">
+</div>
+
+<div class="card" id="redes">
+    <h3>Redes Sociais</h3>
+
+    <div class="fakeimg" contenteditable="true">
+        Instagram: @seuperfil
+        <br>
+        YouTube: Seu Canal
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+    Desenvolvido por Raphael
+</div>
+
 </body>
+<body>
+
+</div>
 </html>
+</body>
+<body>
+
+</div>
+</html>
+
