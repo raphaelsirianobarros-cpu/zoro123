@@ -1,16 +1,100 @@
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f1f1f1;
+    margin:0;
+}
+
+.header{
+    background:white;
+    padding:30px;
+    text-align:center;
+}
+
+.navbar{
+    display:flex;
+    background:#333;
+}
+
+.navbar a{
+    flex:1;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    padding:14px;
+}
+
+.navbar a:hover{
+    background:#555;
+}
+
+.row{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.left{
+    flex:75%;
+    padding:10px;
+}
+
+.right{
+    flex:25%;
+    padding:10px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    margin-top:15px;
+}
+
 .fakeimg{
     background:#aaa;
     min-height:150px;
-    padding:0;
-    overflow:hidden;
+    padding:10px;
 }
-.menu-btn{
-    position:fixed;
-    top:10px;
-    left:10px;
-    font-size:30px;
+
+.fakeimg[contenteditable]{
+    cursor:text;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+button{
+    background:#333;
+    color:white;
     border:none;
-    background:none;
+    padding:10px 20px;
     cursor:pointer;
-    z-index:1000;
+}
+
+button:hover{
+    background:#555;
+}
+
+.footer{
+    background:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+@media(max-width:800px){
+
+.row{
+    flex-direction:column;
+}
+
+.navbar{
+    flex-direction:column;
 }

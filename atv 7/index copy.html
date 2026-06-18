@@ -11,8 +11,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Meu Site Responsivo</title>
+<link rel="stylesheet" href="style.css">
+<title></title>
 
 <style>
 
@@ -107,6 +107,29 @@ button:hover{
 }
 
 @media(max-width:800px){
+    .dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .header{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .card{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .footer{
+    background:#222;
+    color:white;
+}
+
+.dark-mode .navbar{
+    background:#111;
+}
 
 .row{
     flex-direction:column;
@@ -126,6 +149,7 @@ button:hover{
 <div class="header">
     <h1>Zoro header</h1>
     <p>Baixe jogos de graça</p>
+    <button onclick="trocarTema()">🌙 Tema</button>
     <button class="menu-btn">☰</button>
 </div>
 
@@ -167,7 +191,7 @@ button:hover{
 <div class="card" id="contato">
 
 <h2>Prencha esse formurio para asesar esse site</h2>
-
+<h3>para continuar</h3>
 <form>
 
 <label>Primeiro Nome:</label>
@@ -179,7 +203,7 @@ button:hover{
 <label>E-mail:</label>
 <input type="email">
 
-<label>Mensagem:</label>
+<label>Mensagem de erro do site:</label>
 <textarea rows="6"></textarea>
 
 <button type="button" onclick="window.location.href='obrigado.html'">
@@ -214,16 +238,16 @@ button:hover{
 
     <br>
 
-    <h3>nossa logo </h3> <img src="one piece.png" style="width:100%; height:300px; object-fit:cover;">
+    <h3>nossa logo </h3> <img src="Zoro.jpg" style="width:100%; height:300px; object-fit:cover;">
 </div>
 
 <div class="card" id="redes">
     <h3>Redes Sociais</h3>
 
     <div class="fakeimg" contenteditable="true">
-        Instagram: @seuperfil
+        Instagram: Zoroespadas@Herder
         <br>
-        YouTube: Seu Canal
+        YouTube: Zoro Herder
     </div>
 </div>
 
@@ -234,11 +258,13 @@ button:hover{
 <div class="footer">
     Desenvolvido por Raphael
 </div>
-
+<h4>protegido contra robos</h4>
 </body>
 <body>
 
 </div>
+
+<script src="script.js"></script>
 </html>
 </body>
 <body>
