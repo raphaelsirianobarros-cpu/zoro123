@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora Simples</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    text-align:center;
+    margin-top:80px;
+}
+
+input{
+    width:250px;
+    height:40px;
+    font-size:20px;
+}
+
+button{
+    height:45px;
+    font-size:20px;
+    margin-left:10px;
+}
+
+#resultado{
+    margin-top:20px;
+    font-size:25px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Calculadora</h1>
+
+<input type="text" id="conta" placeholder="Ex: 5+8*2">
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+
+function calcular(){
+
+    let conta = document.getElementById("conta").value;
+
+    let resposta = eval(conta);
+
+    document.getElementById("resultado").innerHTML =
+    "Resultado: " + resposta;
+
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

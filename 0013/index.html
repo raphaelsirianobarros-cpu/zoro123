@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Multas</title>
+
+<style>
+body{
+    font-family:Arial;
+    text-align:center;
+    margin-top:50px;
+}
+
+input{
+    padding:10px;
+    font-size:18px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+}
+
+#resultado{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Sistema de Multas</h1>
+
+<p>Digite a velocidade do veículo:</p>
+
+<input type="number" id="velocidade" placeholder="Ex: 120">
+
+<button onclick="verificar()">Verificar</button>
+
+<div id="resultado"></div>
+
+<script>
+function verificar(){
+
+    let vel = Number(document.getElementById("velocidade").value);
+    let resultado = document.getElementById("resultado");
+
+    if(vel > 50 ){
+        resultado.innerHTML =
+        "🚨 MULTADO!<br><br>Você ultrapassou o limite de 60 km/h. Dirija com segurança e respeite as leis de trânsito.";
+    }else{
+        resultado.innerHTML =
+        "✅ Tudo certo! Você está dentro do limite de velocidade.";
+    }
+
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>

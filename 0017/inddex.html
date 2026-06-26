@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Alunos</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.container{
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#lista{
+    border:1px solid black;
+    min-height:120px;
+    padding:10px;
+    text-align:left;
+}
+
+#excluir{
+    border:1px solid black;
+    padding:15px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Cadastro de Alunos</h1>
+
+<input type="text" id="nome" placeholder="Digite seu nome">
+
+<br>
+
+<button onclick="cadastrar()">
+Enviar Cadastro
+</button>
+
+<h2>Lista de Alunos</h2>
+
+<div id="lista"></div>
+
+<h2>Excluir Aluno</h2>
+
+<div id="excluir">
+
+<input type="text" id="nomeExcluir" placeholder="Nome do aluno">
+
+<br>
+
+<button onclick="remover()">
+Excluir
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+let alunos = [];
+
+function cadastrar(){
+
+    let nome = document.getElementById("nome").value;
+
+    if(nome==""){
+        alert("Digite um nome.");
+        return;
+    }
+
+    alunos.push(nome);
+
+    atualizarLista();
+
+    document.getElementById("nome").value="";
+}
+
+function remover(){
+
+    let nome = document.getElementById("nomeExcluir").value;
+
+    alunos = alunos.filter(aluno => aluno != nome);
+
+    atualizarLista();
+
+    document.getElementById("nomeExcluir").value="";
+}
+
+function atualizarLista(){
+
+    let lista = document.getElementById("lista");
+
+    lista.innerHTML="";
+
+    for(let i=0;i<alunos.length;i++){
+
+        lista.innerHTML += "• " + alunos[i] + "<br>";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
